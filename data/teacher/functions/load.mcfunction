@@ -1,1 +1,1 @@
-say Teacher datapack loaded
+say Teacher datapack loaded Данные учителя загрузились!
