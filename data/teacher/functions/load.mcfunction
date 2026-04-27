@@ -1,0 +1,1 @@
+say Teacher datapack loaded
