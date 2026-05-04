@@ -1,7 +1,7 @@
-say [SYSTEM] ☄️ КОНЦЕНТРИРОВАННЫЙ ОРБИТАЛЬНЫЙ УДАР!
+# say [SYSTEM] ☄️ КОНЦЕНТРИРОВАННЫЙ ОРБИТАЛЬНЫЙ УДАР!
 
-title @a title {"text":"ТОЧЕЧНЫЙ УДАР","color":"red","bold":true}
-title @a subtitle {"text":"Пробитие вглубь","color":"gold"}
+# title @a title {"text":"ТОЧЕЧНЫЙ УДАР","color":"red","bold":true}
+# title @a subtitle {"text":"Пробитие вглубь","color":"gold"}
 
 # Молнии в точке
 summon minecraft:lightning_bolt ~ ~ ~
@@ -44,4 +44,4 @@ particle minecraft:flame ~ ~ ~ 1 2 1 0.08 200 force
 # Немного огня сверху
 fill ~-1 ~ ~-1 ~1 ~ ~1 fire replace air
 
-say [SYSTEM] 💥 Глубинный пробой выполнен!
+# say [SYSTEM] 💥 Глубинный пробой выполнен!

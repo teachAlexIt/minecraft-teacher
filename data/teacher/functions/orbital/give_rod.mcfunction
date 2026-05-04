@@ -1,2 +1,2 @@
-give @p minecraft:fishing_rod{display:{Name:'{"text":"Орбитальная указка","color":"aqua","bold":true}'}} 1
-say Выдана орбитальная указка
+give @p minecraft:fishing_rod{display:{Name:'{"text":"Орбитальная указка","color":"aqua","bold":true}',Lore:['{"text":"Запускает орбитальный удар","color":"gray"}']},Unbreakable:1b,orbital_rod:1b} 1
+say [SYSTEM] Выдана орбитальная указка
