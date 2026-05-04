@@ -1,41 +1,47 @@
-say [SYSTEM] ☄️ ОРБИТАЛЬНЫЙ УДАР!
+say [SYSTEM] ☄️ КОНЦЕНТРИРОВАННЫЙ ОРБИТАЛЬНЫЙ УДАР!
 
-title @a title {"text":"ОРБИТАЛЬНЫЙ УДАР","color":"red","bold":true}
-title @a subtitle {"text":"Цель поражена","color":"gold"}
+title @a title {"text":"ТОЧЕЧНЫЙ УДАР","color":"red","bold":true}
+title @a subtitle {"text":"Пробитие вглубь","color":"gold"}
 
-# Молнии и гром
+# Молнии в точке
 summon minecraft:lightning_bolt ~ ~ ~
-summon minecraft:lightning_bolt ~1 ~ ~
-summon minecraft:lightning_bolt ~-1 ~ ~
-summon minecraft:lightning_bolt ~ ~ ~1
-summon minecraft:lightning_bolt ~ ~ ~-1
+summon minecraft:lightning_bolt ~ ~1 ~
+summon minecraft:lightning_bolt ~ ~2 ~
 
-playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 5 0.8
-playsound minecraft:entity.generic.explode master @a ~ ~ ~ 5 0.6
+playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 5 0.7
 
-# Огненный круг
-fill ~-3 ~ ~-3 ~3 ~ ~3 fire replace air
+# 🔥 УЗКИЙ КРАТЕР (2x2)
+fill ~-1 ~ ~-1 ~1 ~ ~1 air
+fill ~-1 ~-1 ~-1 ~1 ~-30 ~1 air
 
-# Много TNT сверху
-summon minecraft:tnt ~ ~18 ~ {Fuse:20}
-summon minecraft:tnt ~1 ~20 ~ {Fuse:24}
-summon minecraft:tnt ~-1 ~22 ~ {Fuse:28}
-summon minecraft:tnt ~ ~24 ~1 {Fuse:32}
-summon minecraft:tnt ~ ~26 ~-1 {Fuse:36}
-summon minecraft:tnt ~2 ~21 ~2 {Fuse:26}
-summon minecraft:tnt ~-2 ~23 ~-2 {Fuse:30}
-summon minecraft:tnt ~2 ~25 ~-2 {Fuse:34}
-summon minecraft:tnt ~-2 ~27 ~2 {Fuse:38}
+# 💣 СТОЛБ TNT (очень мощный вниз)
+summon minecraft:tnt ~ ~25 ~ {Fuse:40}
+summon minecraft:tnt ~ ~22 ~ {Fuse:38}
+summon minecraft:tnt ~ ~19 ~ {Fuse:36}
+summon minecraft:tnt ~ ~16 ~ {Fuse:34}
+summon minecraft:tnt ~ ~13 ~ {Fuse:32}
+summon minecraft:tnt ~ ~10 ~ {Fuse:30}
+summon minecraft:tnt ~ ~7 ~ {Fuse:28}
+summon minecraft:tnt ~ ~4 ~ {Fuse:26}
+summon minecraft:tnt ~ ~1 ~ {Fuse:24}
+summon minecraft:tnt ~ ~-2 ~ {Fuse:22}
+summon minecraft:tnt ~ ~-5 ~ {Fuse:20}
+summon minecraft:tnt ~ ~-8 ~ {Fuse:18}
+summon minecraft:tnt ~ ~-11 ~ {Fuse:16}
+summon minecraft:tnt ~ ~-14 ~ {Fuse:14}
+summon minecraft:tnt ~ ~-17 ~ {Fuse:12}
+summon minecraft:tnt ~ ~-20 ~ {Fuse:10}
 
-# Мгновенное разрушение кратера
-fill ~-4 ~-2 ~-4 ~4 ~2 ~4 air
+# 💥 Дополнительный удар внизу
+summon minecraft:tnt ~ ~-25 ~ {Fuse:5}
+summon minecraft:tnt ~ ~-28 ~ {Fuse:5}
 
-# Частицы взрыва и дыма
-particle minecraft:explosion_emitter ~ ~1 ~ 3 2 3 0 3 force
-particle minecraft:flame ~ ~1 ~ 4 2 4 0.08 300 force
-particle minecraft:smoke ~ ~2 ~ 5 3 5 0.05 300 force
+# Эффекты
+particle minecraft:explosion_emitter ~ ~ ~ 1 1 1 0 2 force
+particle minecraft:smoke ~ ~ ~ 1 2 1 0.05 200 force
+particle minecraft:flame ~ ~ ~ 1 2 1 0.08 200 force
 
-# Поджечь края кратера
-fill ~-5 ~ ~-5 ~5 ~ ~5 fire replace air
+# Немного огня сверху
+fill ~-1 ~ ~-1 ~1 ~ ~1 fire replace air
 
-say [SYSTEM] 💥 Цель уничтожена!
+say [SYSTEM] 💥 Глубинный пробой выполнен!
