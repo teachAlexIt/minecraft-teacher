@@ -3,3 +3,4 @@
 
 function teacher:auto_tick/example
 function teacher:auto_tick/my_trap
+function teacher:orbital/check
